@@ -34,12 +34,16 @@ optional arguments:
   -d, --dry-run         Do not perform any file modification
 ```
 
-### Examples
+Examples:
 
-- Apply on all the jpg files in the current directory:
-  `exif-revgeo.py *.jpg`
-- Apply on all the image files of a given directory:
-  `exif-revgeo.py ~/Pictures/2015/10`
-- Apply recursively on all the image files contained in a directory:
-  `exif-revgeo.py --rd-args='-r' ~/Pictures`
+```bash
+# Apply on all the jpg files in the current directory:
+$ ./exif-revgeo.py *.jpg
+
+# Apply on all the image files of a given directory:
+$ ./exif-revgeo.py ~/Pictures/2015/10
+
+# Apply recursively on all the image files contained in a directory:
+$ ./exif-revgeo.py --rd-args='-r' ~/Pictures
+```
 
