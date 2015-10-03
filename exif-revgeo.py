@@ -116,8 +116,7 @@ def main(args):
     for t in tags:
         tag_location(args.exiftool_bin, args.wr_args, t, args.overwrite_tags, args.dry_run)
 
-
-if __name__ == "__main__":
+def cli():
     parser = argparse.ArgumentParser(description='Add city and country in EXIF based on GPS coords')
     parser.add_argument('--exiftool-bin', type=str, help='exiftool binary to use', default='exiftool')
     parser.add_argument('--rd-args', type=str, help='exiftool read arguments', default='')
@@ -129,3 +128,5 @@ if __name__ == "__main__":
 
     main(args)
 
+if __name__ == "__main__":
+    cli()
