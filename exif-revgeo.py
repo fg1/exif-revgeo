@@ -28,9 +28,9 @@ EXIF_IPTC_LOC = ['City', 'Country-PrimaryLocationName', 'Country-PrimaryLocation
 
 # Description of the webservice doing the reverse geocoding
 REVERSE_GEOCODE_URL = 'http://127.0.0.1:8080/rg/%(lat)f/%(lng)f/0.01'
-REVERSE_GEOCODE_TRANS = {"city": u"City",
-                         "country": u"Country-PrimaryLocationName",
-                         "country_iso3166-3": u"Country-PrimaryLocationCode"}
+REVERSE_GEOCODE_TRANS = {u"city": u"City",
+                         u"country": u"Country-PrimaryLocationName",
+                         u"country_iso3166-3": u"Country-PrimaryLocationCode"}
 
 # ----------------------------------------------------------------------------
 # Helper functions
@@ -82,6 +82,9 @@ def tag_location(exiftool_bin, wr_args, info, overwrite_tags, dry_run):
 
     # Adapts the returned object to the IPTC names
     for k, v in REVERSE_GEOCODE_TRANS.iteritems():
+        if k not in rg_loc:
+            log.warn('Unable to find "' + k + '" in returned location: ' + str(rg_loc))
+            return
         rg_loc[v] = rg_loc.pop(k)
     rg_loc = filter_keys(rg_loc, EXIF_IPTC_LOC)
 
