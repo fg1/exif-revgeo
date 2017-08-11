@@ -38,12 +38,12 @@ Examples:
 
 ```bash
 # Apply on all the jpg files in the current directory:
-$ ./exif-revgeo.py *.jpg
+$ exif-revgeo *.jpg
 
 # Apply on all the image files of a given directory:
-$ ./exif-revgeo.py ~/Pictures/2015/10
+$ exif-revgeo ~/Pictures/2015/10
 
 # Apply recursively on all the image files contained in a directory:
-$ ./exif-revgeo.py --rd-args='-r' ~/Pictures
+$ exif-revgeo --rd-args='-r' ~/Pictures
 ```
 
