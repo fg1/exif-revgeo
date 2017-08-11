@@ -9,15 +9,15 @@ This script is based on [exiftool](http://owl.phy.queensu.ca/~phil/exiftool/) fo
 
 Once both tools are installed, simply clone the repository:
 ```
-$ git clone https://github.com/fg1/exif-revgeo.git
+$ pip install --upgrade https://github.com/fg1/exif-revgeo/archive/master.tar.gz
 ```
 
 ## Usage
 
 ```
-usage: exif-revgeo.py [-h] [--exiftool-bin EXIFTOOL_BIN] [--rd-args RD_ARGS]
-                      [--wr-args WR_ARGS] [-o] [-d]
-                      path
+usage: exif-revgeo [-h] [--exiftool-bin EXIFTOOL_BIN] [--rd-args RD_ARGS]
+                   [--wr-args WR_ARGS] [-o] [-d]
+                   path
 
 Add city and country in EXIF based on GPS coords
 
