@@ -1,4 +1,4 @@
-exif-revgeo: Reverse geocode your photos
+exif_revgeo: Reverse geocode your photos
 ========================================
 
 This utility reads the GPS coordinates from your photos, reverse geocode them, and write the result to the appropriate EXIF city/country location tags.
@@ -9,13 +9,13 @@ This script is based on [exiftool](http://owl.phy.queensu.ca/~phil/exiftool/) fo
 
 Once both tools are installed, simply clone the repository:
 ```
-$ pip install --upgrade https://github.com/fg1/exif-revgeo/archive/master.tar.gz
+$ pip install --upgrade https://github.com/fg1/exif_revgeo/archive/master.tar.gz
 ```
 
 ## Usage
 
 ```
-usage: exif-revgeo [-h] [--exiftool-bin EXIFTOOL_BIN] [--rd-args RD_ARGS]
+usage: exif_revgeo [-h] [--exiftool-bin EXIFTOOL_BIN] [--rd-args RD_ARGS]
                    [--wr-args WR_ARGS] [-o] [-d]
                    path
 
@@ -38,12 +38,12 @@ Examples:
 
 ```bash
 # Apply on all the jpg files in the current directory:
-$ exif-revgeo *.jpg
+$ exif_revgeo *.jpg
 
 # Apply on all the image files of a given directory:
-$ exif-revgeo ~/Pictures/2015/10
+$ exif_revgeo ~/Pictures/2015/10
 
 # Apply recursively on all the image files contained in a directory:
-$ exif-revgeo --rd-args='-r' ~/Pictures
+$ exif_revgeo --rd-args='-r' ~/Pictures
 ```
 

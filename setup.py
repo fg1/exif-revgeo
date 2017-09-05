@@ -36,7 +36,7 @@ setup(
 
     entry_points = {
         'console_scripts': [
-            'exif-revgeo=exif-revgeo:cli',
+            'exif_revgeo=exif_revgeo:cli',
         ],
     },
 )
